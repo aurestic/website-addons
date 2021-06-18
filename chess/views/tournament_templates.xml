@@ -6,10 +6,10 @@
                     <div class="container">
                         <div id="table">
                         </div>
-                            <script type="text/javascript">
+                        <script type="text/javascript">
                                 (function() {
-                                    window.uid = "<t t-esc="uid"/>";
-                                    window.tournament_id = "<t t-esc="tournament"/>";
+                                    window.uid = "<t t-esc="uid" />";
+                                    window.tournament_id = "<t t-esc="tournament" />";
                                  })();
                             </script>
                     </div>
