@@ -243,9 +243,6 @@ odoo.define('stock_picking_barcode.widgets', function (require) {
             this.$('.js_putinpack').click(function(){
                 self.getParent().pack();
             });
-            this.$('.js_drop_down').click(function(){
-                self.getParent().drop_down();
-            });
             this.$('.js_clear_search').click(function(){
                 self.on_searchbox('');
                 self.$('.oe_searchbox').val('');
@@ -1165,7 +1162,7 @@ odoo.define('stock_picking_barcode.widgets', function (require) {
                 model: 'stock.picking',
                 method: 'action_done_from_ui',
                 args: [
-                    self.picking.id, self.picking_type_id
+                    self.picking.id
                 ]
             }).then(function(new_picking_ids){
                 if (new_picking_ids) {

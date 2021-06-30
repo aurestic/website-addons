@@ -160,6 +160,7 @@ class StockPicking(models.Model):
                 )
         return package_id
 
+    @api.model
     def action_done_from_ui(self, picking_id):
         """ called when button 'done' is pushed in the barcode scanner UI """
         # write qty_done into field product_qty for every package_operation before doing the transfer
