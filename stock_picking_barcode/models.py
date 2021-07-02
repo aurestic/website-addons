@@ -263,7 +263,7 @@ class StockMoveLine(models.Model):
                 qty -= 1 if qty >= 1 else 0
                 if qty == 0 and op_obj.product_qty == 0:
                     # we have a line with 0 qty set, so delete it
-                    self.unlink()
+                    op_obj.unlink()
                     return op_obj
             op_obj.write({"qty_done": qty})
         else:
